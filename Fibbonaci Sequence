@@ -1,0 +1,32 @@
+/* Written by Andrew Mavros and Harrison Fernandez on June 17, 2017. 
+ 
+Challenge: Fibonacci Sequence - the first two numbers in the Fibonacci sequence are 1 and 1,
+and each subsequent number is the sum of the previous two.
+Written in C++  */
+ 
+#include <iostream>
+using namespace std;
+ 
+double fib(int x) {
+if (x < 2){
+return 1;
+}
+else{
+return fib(x-1) + fib(x-2);
+}
+}
+ 
+int main ()
+{
+ int n, t1, t2;
+ 
+cout<<"enter the number of terms to display"<<endl;
+cin>> n;
+ 
+for (int i=0; i<n; i++)
+{
+cout << fib(i) << endl;
+}
+ 
+return 0;
+}
